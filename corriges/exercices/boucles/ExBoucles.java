@@ -6,7 +6,7 @@
  * sous la forme : 1 x 5 = 5 etc...
  * 3. Afficher les tables de multiplication pour les nomùbre de 5 à 10 inclus
  */
-package corriges.exercices.boucles;
+package cours_exercices.exercices.boucles;
 
 public class ExBoucles {
     public static void main(String[] args) {
@@ -15,15 +15,15 @@ public class ExBoucles {
         int nombre = 5;
         
         // Affichage avec la boucle for
-        System.out.println("Boucle for");
+        System.out.println("Boucle For");
         
         for (int cpt = 0; cpt < n; cpt++) {
             System.out.println(cpt + 1);
         }
         
         // Affichage avec la boucle while
-        System.out.println("Boucle while");
-
+        System.out.println("Boucle While");
+        
         while (cpt2 < n) {
             System.out.println(cpt2 + 1);
             cpt2++;
@@ -40,9 +40,9 @@ public class ExBoucles {
         while (nombre <= 10) {
             System.out.println();
             System.out.println("Table de multiplication par " + nombre + " :");
-
-            for (int cpt = 0; cpt < n; cpt++) {
-                System.out.println((cpt + 1) + " x " + nombre + " = " + (cpt + 1) * nombre);
+        
+            for (int cpt = 1; cpt <= n; cpt++) {
+                System.out.println(cpt + " x " + nombre + " = " + cpt * nombre);
             }
             
             nombre++;
