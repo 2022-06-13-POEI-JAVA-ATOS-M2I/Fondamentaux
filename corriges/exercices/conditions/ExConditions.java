@@ -14,10 +14,10 @@ public class ExConditions {
     public static void main(String[] args) {
         // Déclarations / définitions des variables
         Scanner clavier = new Scanner(System.in);
- 
+        
         int num1, num2, num3, max;
         int mois;
-         
+        
         // Fournir les données d'entrée
         System.out.print("Saisir le numéro 1 ");
         num1 = clavier.nextInt();
@@ -27,40 +27,40 @@ public class ExConditions {
  
         System.out.print("Saisir le numéro 3 ");
         num3 = clavier.nextInt();
- 
+        
         // Chercher le maximum
-        if(num1 > num2) {
+         if(num1 > num2) {
             if(num1 > num3) {
                 // si num1 > num2 et num1 > num3
                 max = num1;
             }
             else {
-                // si num1 > num2 mais num1 < num3
+                // si num1 > num2 mais num1 <= num3
                 max = num3;
             }
         }
         else {
             if(num2 > num3) {
-                // Si num1 < num2 et num2 > num3
+                // Si num1 <= num2 et num2 > num3
                 max = num2;
             } else {
-                // si num1 < num2 et num2 > num3
+                // si num1 <= num2 et num2 <= num3
                 max = num3;
             }
         }
- 
+         
         // Afficher le résultat
-        System.out.println("le maximum est = " + max);
- 
+         System.out.println("le maximum est = " + max);
+         
         // Afficher si num1 est pair ou impair
-        System.out.println((num1 % 2 == 0) ? "le nombre 1 est pair" : "le nombre 1 est impair");
-        System.out.println((num2 % 2 == 0) ? "le nombre 2 est pair" : "le nombre 1 est impair");
-        System.out.println((num3 % 2 == 0) ? "le nombre 3 est pair" : "le nombre 1 est impair");
-
+        System.out.println( "le nombre 1 est " + ((num1 % 2 == 0) ? "pair" : "impair"));
+        System.out.println( "le nombre 2 est " + ((num2 % 2 == 0) ? "pair" : "impair"));
+        System.out.println( "le nombre 3 est " + ((num3 % 2 == 0) ? "pair" : "impair"));
+        
         // Fournir les données d'entrée
         System.out.print("Saisir le numero de mois (1-12) : ");
-        mois = clavier.nextInt();
- 
+        mois = clavier.nextInt(); 
+        
         // Afficher le résultat
         switch(mois) {
             case 1, 3, 5, 7, 8, 10, 12:
@@ -75,7 +75,7 @@ public class ExConditions {
             default:
                 System.out.println("Entree invalide! Veuillez saisir le numero du mois entre (1-12).");
         }
-        
+                
         // Fermer les ressources
         clavier.close();
     }
