@@ -1,7 +1,7 @@
 /**
  * Exercice Interface
  * 
- * Ecrire une interface nommée FigureGeometrique
+ * Ecrire une interface nommée IFigureGeometrique
  * cette interface doit avoir la déclaration de 2 méthodes :
  * getAire() et getPerimetre()
  * 
@@ -9,99 +9,101 @@
  * 
  * Ecrire une classe principale appelant
  */
-package corriges.exercices.interfaces;
+
+package cours_exercices.exercices.interfaces;
 
 // Interface FigureGeométrique
-interface FigureGeometrique {
+interface IFigureGeometrique {
     public float getAire();
     public float getPerimetre();
 }
 
 // Classe Carre
-class Carre implements FigureGeometrique {
-    // Propriété
+class Carre implements IFigureGeometrique {
+    // propriété
     private int cote;
     
     // Constructeur
     public Carre(int cote) {
         this.cote = cote;
     }
-
+    
     // Getter
     public int getCote() {
-        return cote;
+        return this.cote;
     }
     
     // Setter
     public void setCote(int cote) {
         this.cote = cote;
     }
-
+    
     // Implementation des méthodes de l'interface
     @Override
     public float getAire() {
         return (float) Math.pow(this.getCote(), 2);
     }
-
+    
     @Override
     public float getPerimetre() {
+        // return 4 * this.cote;
         return 4 * this.getCote();
     }
 }
 
 // Classe Cercle
-class Cercle implements FigureGeometrique {
+class Cercle implements IFigureGeometrique {
     // Propriété
     private int rayon;
     
     // Constructeur
-    Cercle(int rayon) {
+    public Cercle(int rayon) {
         this.rayon = rayon;
     }
     
     // Getter
     public int getRayon() {
-        return rayon;
+        return this.rayon;
     }
-
+    
     // Setter
     public void setRayon(int rayon) {
         this.rayon = rayon;
     }
-
+    
     // Implementation des méthodes de l'interface
     @Override
     public float getAire() {
-        return (float) (Math.PI * (Math.pow(this.getRayon(), 2)));
+        return (float) (Math.PI * (Math.pow(this.rayon, 2)));
     }
-
+    
     @Override
     public float getPerimetre() {
-        return (float) (2 * Math.PI * this.getRayon());
+        return (float) (2 * Math.PI * this.rayon);
     }
 }
 
 // Classe Rectangle
-class Rectangle implements FigureGeometrique {
+class Rectangle implements IFigureGeometrique {
     // Propriétés
     private int longueur;
     private int largeur;
-
+    
     // Constructeur
-    public Rectangle(int longueur, int largeur) {
+    public Rectangle( int longueur, int largeur) {
         this.longueur = longueur;
         this.largeur = largeur;
     }
-
+    
     // Getters
     public int getLongueur() {
-        return longueur;
+        return this.longueur;
     }
 
     public int getLargeur() {
-        return largeur;
+        return this.largeur;
     }
-
+    
     // Setters
     public void setLongueur(int longueur) {
         this.longueur = longueur;
@@ -114,18 +116,17 @@ class Rectangle implements FigureGeometrique {
     // Implementation des méthodes de l'interface
     @Override
     public float getAire() {
-        return this.getLongueur() * this.getLargeur();
+        return this.longueur * this.largeur;
     }
-
+    
     @Override
     public float getPerimetre() {
-        return 2 * (this.getLongueur() + this.getLargeur());
+        return 2 * (this.longueur + this.largeur);
     }
 }
-
 // Classe TriangleRectangle
-class TriangleRectangle implements FigureGeometrique {
-    // Propriétés
+class TriangleRectangle implements IFigureGeometrique {
+    // Propriété
     private int a;
     private int b;
 
@@ -134,15 +135,16 @@ class TriangleRectangle implements FigureGeometrique {
         this.a = a;
         this.b = b;
     }
+    
     // Getters
     public int getA() {
-        return a;
+        return this.a;
     }
 
     public int getB() {
-        return b;
+        return this.b;
     }
-
+    
     // Setters
     public void setA(int a) {
         this.a = a;
@@ -151,21 +153,21 @@ class TriangleRectangle implements FigureGeometrique {
     public void setB(int b) {
         this.b = b;
     }
-
+    
     // Implementation des méthodes de l'interface
     @Override
     public float getAire() {
-        return this.getA() * this.getB() / 2;
+        return this.a * this.b / 2;
     }
-
+    
     @Override
     public float getPerimetre() {
-        return (float) (this.getA() + this.getB() + this.getHypotenuse());
+        return (float) (this.a + this.b + this.getHypotenuse());
     }
-
+    
     // Methode de la classe
-    public double getHypotenuse(){
-        double temp = Math.pow(getA(), 2) + Math.pow(getB(), 2);
+    public double getHypotenuse() {
+        double temp = Math.pow(this.a, 2) + Math.pow(this.b, 2);
         return Math.sqrt(temp);
     }
 }
@@ -187,6 +189,6 @@ public class ExInterfaces {
 
         TriangleRectangle triangleRectangle = new TriangleRectangle(3, 4);
         System.out.println("L'aire du triangle rectangle est de " + triangleRectangle.getAire());
-        System.out.println("Le perimetre du triangle rectangle est de " + triangleRectangle.getPerimetre());
+        System.out.println("Le perimetre du triangle rectangle est de " + triangleRectangle.getPerimetre());        
     }
 }
