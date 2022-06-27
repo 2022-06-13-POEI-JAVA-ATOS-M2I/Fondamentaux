@@ -2,12 +2,12 @@
  * Exemple sur les interfaces dérivées
  */
 
-package corriges.cours;
+package cours_exercices.cours;
 
 // Interface avec méthode défaut
 interface IAffichage {
     default void affiche() {
-        System.out.println("Je suis un IAffichage : " + this);
+        System.out.println("Je suis un IAffichage.");
     }
 }
 
@@ -19,7 +19,7 @@ interface IAffichageDerivee1 extends IAffichage {}
 // la méthode affiche devient abstraite.
 interface IAffichageDerivee2 extends IAffichage {
     @Override
-    void affiche();	
+    void affiche();
 }
 
 // Interface dérivée de l'interface IAffichage,
@@ -27,7 +27,7 @@ interface IAffichageDerivee2 extends IAffichage {
 interface IAffichageDerivee3 extends IAffichage {
     @Override
     default void affiche() {
-        System.out.println("Je suis IAffichageDerivee3 : " + this);
+        System.out.println("Je suis IAffichageDerivee3 : ");
     }
 }
 
@@ -40,7 +40,7 @@ class A implements IAffichageDerivee1 {}
 class B implements IAffichageDerivee2 {
     @Override
     public void affiche() {
-        System.out.println("Je suis un B : " + this);
+        System.out.println("Je suis un B : ");
     }
 }
 
@@ -54,7 +54,7 @@ public class InterfacesDerivees {
         A a = new A();
         B b = new B();
         C c = new C();
-
+        
         a.affiche();
         b.affiche();
         c.affiche();
