@@ -11,29 +11,47 @@
  * Supprimer un élément de la liste et réafficher la liste
  */
 
-package cours_exercices.exercices.collection;
+package corriges.exercices.collection;
 
 // Classe principale
+
+import java.util.ArrayList;
+
 public class ExCollection {
     public static void main(String args[]) {
         // Créer un ArrayList
-
+        ArrayList<String> liste = new ArrayList<>();
+        
         // Ajouter des éléments à l'ArrayList
+        liste.add("Pascal");
+        liste.add("C++");
+        liste.add("PHP");
+        liste.add("Python");
         
         // Insertion d'un élément au début de la liste
-
+        liste.add(0, "Java");
+        
         // Afficher la taille de la liste
+        System.out.println("La taille de l'arraylist : " + liste.size());
         
         // Afficher l'ArrayList
+        System.out.println("Le contenu de l'arraylist : " + liste);
 
         // Modification d'un élément de la liste
-
+        liste.set(3, "Cobol");
+        
         // Parcour de la liste
+        for (String elem : liste) {
+            System.out.println("Element : " + elem);
+        }
         
         // Supprimer des éléments de l'ArrayList
-
+        liste.remove("Pascal");
+        
         // Afficher l'ArrayList
+        System.out.println("Arraylist apres suppression : " + liste);
         
         // parcour avec la methode ForEach() et une lambda
+        liste.forEach(elem -> System.out.println("Element : " + elem));
     }
 }
