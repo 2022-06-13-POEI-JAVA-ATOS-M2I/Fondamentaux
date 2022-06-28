@@ -1,3 +1,7 @@
+/**
+ * Exemple de getteurs / setteurs
+ */
+
 package corriges.cours;
 
 class Velo{
