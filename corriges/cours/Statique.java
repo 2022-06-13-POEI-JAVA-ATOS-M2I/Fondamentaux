@@ -1,4 +1,7 @@
-package cours_exercices.cours;
+/**
+ * Exemple d'attributs et methodes static
+ */
+package corriges.cours;
 
 class TestStatic {
     public int cpt = 0;
