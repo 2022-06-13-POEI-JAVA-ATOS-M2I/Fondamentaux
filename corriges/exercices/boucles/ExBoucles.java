@@ -6,7 +6,7 @@
  * sous la forme : 1 x 5 = 5 etc...
  * 3. Afficher les tables de multiplication pour les nomùbre de 5 à 10 inclus
  */
-package cours_exercices.exercices.boucles;
+package corriges.exercices.boucles;
 
 public class ExBoucles {
     public static void main(String[] args) {
