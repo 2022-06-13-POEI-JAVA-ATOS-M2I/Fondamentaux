@@ -13,7 +13,7 @@
  * NB: le programme doit gérer les exceptions au niveau de la saisie des données de l’utilisateur
  */
 
-package cours_exercices.exercices.exceptions;
+package corriges.exercices.exceptions;
 
 import java.util.ArrayList;
 import java.util.Collections;
