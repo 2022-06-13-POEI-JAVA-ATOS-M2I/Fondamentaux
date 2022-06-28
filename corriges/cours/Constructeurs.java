@@ -2,7 +2,7 @@
  * Exercice sur les constructeurs
  */
 
-package cours_exercices.cours;
+package corriges.cours;
 
 // Classe Maison
 class Maison {
