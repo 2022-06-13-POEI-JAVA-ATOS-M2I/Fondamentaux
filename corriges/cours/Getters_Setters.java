@@ -1,4 +1,4 @@
-package cours_exercices.cours;
+package corriges.cours;
 
 class Velo{
     private int nbRoues = 2;
