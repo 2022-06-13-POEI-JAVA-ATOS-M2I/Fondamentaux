@@ -2,7 +2,7 @@
  * Exemple sur les interfaces dérivées
  */
 
-package cours_exercices.cours;
+package corriges.cours;
 
 // Interface avec méthode défaut
 interface IAffichage {
