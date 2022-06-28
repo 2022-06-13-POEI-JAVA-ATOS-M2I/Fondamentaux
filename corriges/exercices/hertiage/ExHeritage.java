@@ -10,7 +10,7 @@
  * Vous y ajouterez une méthode volume qui devra renvoyer le volume du cylindre
  * (rappel : volume d’un cylindre = surface de section × hauteur).
  */
-package cours_exercices.exercices.hertiage;
+package corriges.exercices.hertiage;
 
 // Classe Cercle
 class Cercle {
