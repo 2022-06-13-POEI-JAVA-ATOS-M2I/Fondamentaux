@@ -2,7 +2,7 @@
  * Exemple sur les enuméartions
  */
 
-package cours_exercices.cours;
+package corriges.cours;
 
 // Enumération
 // Avec enum on ne crée pas autant de constante qu'il y a de jours.
