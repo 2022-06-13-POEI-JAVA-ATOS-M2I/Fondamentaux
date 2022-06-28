@@ -10,7 +10,7 @@
  * Ecrire une classe principale appelant
  */
 
-package cours_exercices.exercices.interfaces;
+package corriges.exercices.interfaces;
 
 // Interface FigureGeométrique
 interface IFigureGeometrique {
